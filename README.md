@@ -1,1 +1,4 @@
-# VM-Implementation-c-
+# VM-Implementation-cpp
+
+g++ *.cpp -o main
+./main
