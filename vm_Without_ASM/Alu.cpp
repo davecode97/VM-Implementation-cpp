@@ -16,6 +16,8 @@
  * =====================================================================================
  */
 #include "Alu.hpp"
+#include <stdio.h>
+
 
 Alu::Alu() {}
 
@@ -48,8 +50,8 @@ int Alu::getOperand2()
 
 int Alu::add()
 {
-
-    int res = operand1 + operand2;
+    int res;
+	res = operand1 + operand2;
 
     return res;
 }
@@ -57,24 +59,25 @@ int Alu::add()
 
 int Alu::substraction()
 {
-	     int res = operand1 - operand2;
-
+	int res;
+    res = operand1 - operand2;
 
     return res;
 }
 
 int Alu::mult()
 {
-        int res = operand1 * operand2;
+    int res;
+    res = operand1 * operand2;
 
     return res;
 }
 
 
-int Alu::div()
+double Alu::div()
 {
-    int res = operand1 / operand2;
+    double res = 0;
+    res = operand1 / operand2;
     
     return res;
-
 }

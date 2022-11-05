@@ -16,6 +16,8 @@
  * =====================================================================================
  */
 #include "Alu.hpp"
+#include <stdio.h>
+
 
 Alu::Alu() {}
 
@@ -81,10 +83,10 @@ int Alu::mult()
 }
 
 
-int Alu::div()
+double Alu::div()
 {
-    int res = 0;
-    int rem = 0;
+    double res = 0;
+    double rem = 0;
 
     __asm("movl $0x0, %%edx;"
           "movl %2, %%eax;"

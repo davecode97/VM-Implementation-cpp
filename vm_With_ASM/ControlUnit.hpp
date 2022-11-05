@@ -32,7 +32,6 @@ class ControlUnit
 		int flag;
 	public:
 		ControlUnit();
-		ControlUnit(int);
 		Instruction* fetch(Program theProgram, int theAddress);
 		void decode(Instruction* instruction, Memory* memory);
 		void execute(std::string decodedInstruction);

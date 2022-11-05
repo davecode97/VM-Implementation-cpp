@@ -37,7 +37,7 @@ class Alu
 		int add();
 		int substraction();
 		int mult();
-		int div();
+		double div();
 		
 };
 #endif
