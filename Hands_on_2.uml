@@ -1,0 +1,142 @@
+#VM, UML, model
+@startuml
+	VirtualMachine *-- CPU
+	VirtualMachine *-- Memory
+
+	class CPU {
+       	}
+	class Memory {
+       	}
+
+	RegisterGP <|-- AL
+	RegisterGP <|-- AH
+	RegisterGP <|-- BL
+	RegisterGP <|-- BH
+	
+	class RegisterGP {
+		type:object
+		
+		setType():object
+		getType():void
+	}
+
+	class AL {
+		value:object
+		
+		setValue():object
+		getValue():void
+	}
+	class AH {
+		value:object
+		
+		setValue():object
+		getValue():void
+	}
+	class BL { 
+		value:object
+		
+		setValue():object
+		getValue():void
+	}
+	class BH {
+		value:object
+		
+		setValue():object
+		getValue():void
+       	}
+
+	Register <|-- RegisterGP
+	Register <|-- RegisterMBR
+	Register <|-- RegisterMAR
+	Register <|-- RegisterIR
+	Register <|-- AcumulatorACC
+	Register <|-- CounterPC
+
+	class Register {
+		value:object
+		
+		setValue():object
+		getValue():void
+	}
+
+	class RegisterMBR {
+		value: object
+
+		setValue():object
+		getValue():void
+	}
+
+	class RegisterMAR {
+		value: object
+		--
+		setValue:object
+		getValue:void
+	}
+
+
+	class AcumulatorACC {
+		value: object
+		--
+		setValue:object
+		getValue:void
+	}
+
+	class RegisterIR {
+		value: object
+		--
+		setValue:object
+		getValue:void
+	}
+	
+	class CounterPC {
+		value: object
+		--
+		setValue:object
+		getValue:void
+	}
+
+	
+	
+	VirtualMachine *-- Register
+	VirtualMachine *-- ProgramLoader
+
+	Memory <|-- RAM
+	
+	CPU *-- ALU
+	CPU *-- CU
+
+	Instruction <|-- START
+	Instruction <|-- END
+	Instruction <|-- MOV
+	Instruction <|-- STO
+	Instruction <|-- ADD
+	Instruction <|-- MULT
+	Instruction <|-- REST
+	Instruction <|-- DIV
+
+	class Instruction {
+		name:String
+		argument[]:object
+		length:int
+		--
+		setName():String
+		getName():void
+		setArgument():object
+		getArgument():void
+		setLength():int
+		getLength():void
+	}
+
+	note top of Program: VM's Input
+	Program <|-- Instruction
+	Program <|-- Data
+
+	class Data {
+		payload:object
+		--
+		setPayload():object
+		getPayload():object
+	}
+
+
+@enduml
