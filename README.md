@@ -12,6 +12,6 @@
 ![Hands_on_2](https://user-images.githubusercontent.com/67779237/200102551-67382020-a52e-459b-b05f-2a8291104a7b.png)
 
 
-Signature : Cloud Computing
+<i>Subject : Cloud Computing</i>
 
-University: Tecnologico Superior de Jalisco - Zapopan.
+<i>University: Tecnologico Superior de Jalisco - Zapopan.</i>
