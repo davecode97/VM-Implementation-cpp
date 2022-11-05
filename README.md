@@ -5,6 +5,11 @@
 
 2. ./main
 
+## vim + plantuml commads:
+* PlantumlOpen - To render in browser.
+* PlantumlSave Hands-on 7.png  - To save uml rendering in current path.
+
+
 <hr>
 
 
